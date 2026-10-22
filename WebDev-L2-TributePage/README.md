@@ -28,8 +28,8 @@ A visually engaging tribute page dedicated to Dr. A.P.J. Abdul Kalam, India's "M
 Images sourced from [Wikimedia Commons / Pinterest] for the profile photo and hero background, used under royalty-free/public domain terms.
 
 ## Screenshots
-![Tribute Page](A_P_J_Abdul_Kalam.jpg)`*
-![Tribute Page](hero-bg.jpg)`*
-
+![hero](<Screenshot 2026-10-22 170908.png>)
+![Bio](<Screenshot 2026-10-22 170944.png>)
+![timeline](<Screenshot 2026-10-22 171007.png>)
 ## Author
 Anjali Shah— Web Development & Designing Intern, Oasis Infobyte
