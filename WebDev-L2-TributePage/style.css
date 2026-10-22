@@ -1,0 +1,222 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Arial, sans-serif;
+    line-height: 1.7;
+    color: #222;
+    background: #fdfdfd;
+}
+
+/* ===== Hero ===== */
+.hero {
+    position: relative;
+    min-height: 75vh;
+    background: linear-gradient(rgba(11,61,145,0.75), rgba(11,61,145,0.85)), url('hero-bg.jpg') center/cover no-repeat;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: #fff;
+}
+
+.hero-overlay {
+    animation: fadeIn 1s ease-in;
+    padding: 20px;
+}
+
+.hero h1 {
+    font-family: Georgia, 'Times New Roman', serif;
+    font-size: clamp(2.2rem, 6vw, 3.5rem);
+    margin-bottom: 15px;
+    letter-spacing: 1px;
+}
+
+.hero .tagline {
+    font-size: clamp(1rem, 2.5vw, 1.3rem);
+    color: #d6e4ff;
+    letter-spacing: 0.5px;
+}
+
+/* ===== Image section ===== */
+.image-section {
+    display: flex;
+    justify-content: center;
+    background: #fdfdfd;
+    padding: 50px 20px;
+}
+
+.image-section img {
+    max-width: 320px;
+    width: 100%;
+    border-radius: 50%;
+    border: 6px solid #0b3d91;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.25);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.image-section img:hover {
+    transform: scale(1.05);
+    box-shadow: 0 14px 30px rgba(0,0,0,0.35);
+}
+
+/* ===== Biography ===== */
+.bio-section {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 60px 20px;
+}
+
+.bio-section h2,
+.timeline-section h2 {
+    font-family: Georgia, 'Times New Roman', serif;
+    font-size: 2.2rem;
+    margin-bottom: 30px;
+    color: #0b3d91;
+    position: relative;
+    display: inline-block;
+}
+
+.bio-section h2::after,
+.timeline-section h2::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -8px;
+    width: 60px;
+    height: 3px;
+    background: #ff9500;
+    transition: width 0.4s ease;
+}
+
+.bio-section h2:hover::after,
+.timeline-section h2:hover::after {
+    width: 100%;
+}
+
+.bio-section p {
+    margin-bottom: 18px;
+    font-size: 1.08rem;
+    color: #333;
+}
+
+/* ===== Timeline (connected line + dots) ===== */
+.timeline-section {
+    background: #f0f4fa;
+    padding: 60px 20px;
+    text-align: center;
+}
+
+.timeline {
+    max-width: 700px;
+    margin: 40px auto 0;
+    list-style: none;
+    position: relative;
+    text-align: left;
+}
+
+.timeline::before {
+    content: '';
+    position: absolute;
+    left: 10px;
+    top: 0;
+    bottom: 0;
+    width: 3px;
+    background: #0b3d91;
+}
+
+.timeline li {
+    position: relative;
+    background: #fff;
+    padding: 16px 20px 16px 35px;
+    margin-bottom: 18px;
+    margin-left: 30px;
+    border-radius: 8px;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
+    cursor: pointer;
+}
+
+.timeline li::before {
+    content: '';
+    position: absolute;
+    left: -36px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 16px;
+    height: 16px;
+    background: #ff9500;
+    border: 3px solid #0b3d91;
+    border-radius: 50%;
+}
+
+.timeline li:hover {
+    transform: translateX(10px) scale(1.02);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+}
+
+.timeline .year {
+    font-weight: bold;
+    color: #0b3d91;
+    margin-right: 8px;
+    display: block;
+    font-size: 1.05rem;
+}
+
+/* ===== Quote block ===== */
+.quote-section {
+    background: #0b3d91;
+    color: #fff;
+    text-align: center;
+    padding: 70px 20px;
+}
+
+.quote-section blockquote {
+    max-width: 700px;
+    margin: 0 auto;
+    font-family: Georgia, 'Times New Roman', serif;
+    font-size: clamp(1.2rem, 3vw, 1.7rem);
+    font-style: italic;
+    line-height: 1.6;
+    transition: transform 0.3s ease;
+}
+
+.quote-section:hover blockquote {
+    transform: scale(1.03);
+}
+
+.quote-section footer {
+    margin-top: 18px;
+    font-size: 1rem;
+    font-style: normal;
+    color: #d6e4ff;
+}
+
+/* ===== Footer ===== */
+.page-footer {
+    text-align: center;
+    padding: 25px;
+    background: #111;
+    color: #aaa;
+    font-size: 0.9rem;
+}
+
+/* ===== Animations ===== */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.bio-section, .timeline-section, .quote-section, .image-section {
+    animation: fadeIn 0.8s ease-in;
+}
+
+/* ===== Responsive ===== */
+@media (max-width: 600px) {
+    .hero { min-height: 60vh; }
+    .bio-section, .timeline-section, .quote-section { padding: 40px 15px; }
+    .timeline li { margin-left: 20px; padding-left: 28px; }
+}
