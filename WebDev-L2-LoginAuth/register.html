@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="auth-container">
+        <h1>Create Account</h1>
+        <p class="subtitle">Join us — it only takes a minute</p>
+
+        <form id="registerForm" novalidate>
+            <div class="form-group">
+                <label for="regEmail">Email / Username</label>
+                <input type="text" id="regEmail" placeholder="you@example.com">
+                <span class="error-msg" id="regEmailError"></span>
+            </div>
+
+            <div class="form-group">
+                <label for="regPassword">Password</label>
+                <input type="password" id="regPassword" placeholder="Minimum 8 characters, 1 number">
+                <span class="error-msg" id="regPasswordError"></span>
+            </div>
+
+            <div class="form-group">
+                <label for="regConfirm">Confirm Password</label>
+                <input type="password" id="regConfirm" placeholder="Re-enter password">
+                <span class="error-msg" id="regConfirmError"></span>
+            </div>
+
+            <button type="submit" id="registerBtn">Register</button>
+            <p class="success-msg" id="registerSuccess"></p>
+        </form>
+
+        <p class="switch-link">Already have an account? <a href="login.html">Login here</a></p>
+    </div>
+
+    <script src="auth.js"></script>
+</body>
+</html>
